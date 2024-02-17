@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.containers {
+    margin-top: 150px;
+}
+
+.text h1 {
+    font-size: 63px;
+    font-weight: 700;
+    line-height: 70px;
+    width: 540px;
+    color: rgba(57, 78, 106, 1);
+}
+
+.text p {
+    margin-top: 30px;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 32px;
+    color: rgba(57, 78, 106, 1);
+    margin-bottom: 40px;
+    width: 540px;
+}
+
+.text button {
+    width: 147.11px;
+    height: 48px;
+    top: 454px;
+    left: 32px;
+    padding: 0px, 16.8px, 0px, 17px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 14px;
+    color: rgba(219, 225, 255, 1);
+    background: rgba(5, 122, 255, 1);
+    cursor: pointer;
+}
+
+.text button:hover {
+    background: rgb(64, 146, 239);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rounded_box {
+    width: 420px;
+    height: 460px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.card {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.card h1 {
+    font-size: 35px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 1.5px;
+    color: rgba(57, 78, 106, 1);
+    margin-bottom: 20px;
+}
+
+.cart {
+    box-shadow: 0px 14px 18px -2px rgba(116, 131, 144, 0.3);
+    padding: 15px;
+    border-radius: 10px;
+
+}
+
+.cart img {
+    width: 370px;
+    height: 260px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    transition: all 0.5s;
+    flex-wrap: wrap;
+}
+
+.cart h2 {
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-top: 40px;
+    color: rgba(57, 78, 106, 1);
+    margin-bottom: 20px;
+}
+
+.cart:hover {
+    cursor: pointer;
+    box-shadow: 0px 26px 39px 9px rgba(34, 60, 80, 0.16);
+}
+
+.cart h3 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.containers .loader {
+    text-align: center;
+    font-size: 40px;
+    font-size: 700;
+    color: rgb(242, 173, 82);
+}
+
+@media only screen and (max-width: 800px) {
+    .header {
+        display: block;
+    }
+
+    .text {
+        margin-bottom: 50px;
+    }
+
+    .rounded_box {
+        width: 380px;
+        height: 420px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+
+    .text h1 {
+        font-size: 63px;
+        font-weight: 700;
+        line-height: 70px;
+        width: 500px;
+        color: rgba(57, 78, 106, 1);
+    }
+
+    .text p {
+        margin-top: 30px;
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 32px;
+        color: rgba(57, 78, 106, 1);
+        margin-bottom: 40px;
+        width: 500px;
+    }
+
+    .cars {
+        flex-wrap: wrap;
+        align-items: center;
+        
+    }
+
+}

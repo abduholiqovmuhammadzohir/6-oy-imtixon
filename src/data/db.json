@@ -1,0 +1,39 @@
+{
+    "en": {
+        "translation": {
+            "home":"Home",
+            "about": "About",
+            "products": "Products",
+            "cart": "Cart",
+            "text":"We are changing the way people shop",
+            "text1":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore repellat explicabo enim soluta temporibus asperiores aut obcaecati perferendis porro nobis.",
+            "textbtn":"OUR PRODUCTS",
+            "text2":"Featured Products"
+
+        }
+    },
+    "ru": {
+        "translation": {
+            "home": "Дом",
+            "about": "Навыки",
+            "products": "Проект",
+            "cart": "тележка",
+            "text":"We are changing the way people shop",
+            "text1":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore repellat explicabo enim soluta temporibus asperiores aut obcaecati perferendis porro nobis.",
+            "textbtn":"OUR PRODUCTS",
+            "text2":"Featured Products"
+        }
+    },
+    "uz": {
+        "translation": {
+            "home": "Uy",
+            "about": "Haqida",
+            "products": "Loyiha",
+            "cart": "Arava",
+            "text":"We are changing the way people shop",
+            "text1":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore repellat explicabo enim soluta temporibus asperiores aut obcaecati perferendis porro nobis.",
+            "textbtn":"OUR PRODUCTS",
+            "text2":"Featured Products"
+        }
+    }
+}
