@@ -1,10 +1,15 @@
 import React from 'react'
 import styles from "./index.module.css"
+import { Translation } from 'react-i18next';
 
 export default function index() {
   return (
     <div className={styles.container}>
-      <h1>We love <span>cart</span></h1>
+      <Translation>
+        {
+          t => <h1>{t('carte')}</h1>
+        }
+      </Translation>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore quae quam
         blanditiis vitae, dolor non eveniet ipsum voluptatibus, quia optio aut! Perferendis ipsa
         cumque ipsam nostrum reprehenderit ad illo sed officiis ea tempore! Similique eos

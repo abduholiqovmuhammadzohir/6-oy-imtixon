@@ -8,7 +8,22 @@
             "text":"We are changing the way people shop",
             "text1":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore repellat explicabo enim soluta temporibus asperiores aut obcaecati perferendis porro nobis.",
             "textbtn":"OUR PRODUCTS",
-            "text2":"Featured Products"
+            "text2":"Featured Products",
+            "aboute":"We love about",
+            "carte":"We love cart",
+            "product":"Search Product",
+            "category":"Select Category",
+            "company":"Select Company",
+            "sort":"Sort by",
+            "tables":"Tables",
+            "chairs":"Chairs",
+            "kids":"Kids",
+            "sofas":"Sofas",
+            "beds":"Beds",
+            "high":"high",
+            "low":"low",
+            "search":"SEARCH",
+            "reset":"RESET"
 
         }
     },
@@ -18,10 +33,25 @@
             "about": "Навыки",
             "products": "Проект",
             "cart": "тележка",
-            "text":"We are changing the way people shop",
-            "text1":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore repellat explicabo enim soluta temporibus asperiores aut obcaecati perferendis porro nobis.",
-            "textbtn":"OUR PRODUCTS",
-            "text2":"Featured Products"
+            "text":"Мы меняем способ совершения покупок",
+            "text1":"Lore ipsum, dolor sit amet consectetur adipisicing elit. Tempore repellat explicabo enim soluta temporibus asperiores aut obcaecati perferendis porro nobis.",
+            "textbtn":"НАШИ ПРОДУКТЫ",
+            "text2":"Рекомендуемые продукты",
+            "aboute":"Мы любим о",
+            "carte":"Мы любим тележку",
+            "product":"Поиск продукта",
+            "category":"выберите категорию",
+            "company":"Выберите компанию",
+            "sort":"Сортировать по",
+            "tables":"Таблицы",
+            "chairs":"Стулья",
+            "kids":"Дети",
+            "sofas":"Диваны",
+            "beds":"Кровати",
+            "high":"высокий",
+            "low":"низкий",
+            "search":"ПОИСК",
+            "reset":"ПЕРЕЗАГРУЗИТЬ"
         }
     },
     "uz": {
@@ -30,10 +60,25 @@
             "about": "Haqida",
             "products": "Loyiha",
             "cart": "Arava",
-            "text":"We are changing the way people shop",
-            "text1":"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore repellat explicabo enim soluta temporibus asperiores aut obcaecati perferendis porro nobis.",
-            "textbtn":"OUR PRODUCTS",
-            "text2":"Featured Products"
+            "text":"Biz odamlarning xarid qilish istaymiz",
+            "text1":"Lo ipsum, dolor sit amet consectetur adipisicing elit. Tempore repellat explicabo enim soluta temporibus asperiores aut obcaecati perferendis porro nobis.",
+            "textbtn":"MAHSULOTLARIMIZ",
+            "text2":"Tanlangan mahsulotlar",
+            "aboute":"Biz sevamiz",
+            "carte":"Biz aravani yaxshi ko'ramiz",
+            "product":"Mahsulotni qidirish",
+            "category":"Kategoriyani tanlang",
+            "company":"Kompaniyani tanlang",
+            "sort":"Saralash turi",
+            "tables":"Jadvallar",
+            "chairs":"Kreslolar",
+            "kids":"Bolalar",
+            "sofas":"Divanlar",
+            "beds":"To'shaklar",
+            "high":"yuqori",
+            "low":"past",
+            "search":"QIDIRMOQ",
+            "reset":"QAYTA O'RNATISH"
         }
     }
 }

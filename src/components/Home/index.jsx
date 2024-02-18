@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import styles from "./index.module.css"
-
+import { Translation } from 'react-i18next';
 
 export default function index() {
+
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const Navigate = useNavigate()
@@ -34,9 +35,21 @@ export default function index() {
           <>
             <div className={styles.header}>
               <div className={styles.text}>
-                <h1>We are changing the way people shop</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore repellat explicabo enim soluta temporibus asperiores  aut obcaecati perferendis porro nobis.</p>
-                <button>OUR PRODUCTS</button>
+                <Translation>
+                  {
+                    t => <h1>{t('text')}</h1>
+                  }
+                </Translation>
+                <Translation>
+                  {
+                    t => <p>{t('text1')}</p>
+                  }
+                </Translation>
+                <Translation>
+                  {
+                    t => <button>{t('textbtn')}</button>
+                  }
+                </Translation>
               </div>
 
               <div className={styles.carusel}>
@@ -57,10 +70,14 @@ export default function index() {
               </div>
             </div>
             <div className={styles.card}>
-              <h1>Featured Products</h1>
+              <Translation>
+                {
+                  t => <h1>{t('text2')}</h1>
+                }
+              </Translation>
               <hr />
 
-              <div className={styles.cards}  data-aos="zoom-in-down">
+              <div className={styles.cards} data-aos="zoom-in-down">
                 {
                   data.map((data, index) => {
                     return (

@@ -10,8 +10,7 @@ import DarkModeIcon from '@mui/icons-material/DarkMode';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
 import { useTranslation } from 'react-i18next';
 import Product from './components/product';
-import Signin from './components/Signin';
-import Account from './components/Account';
+
 
 function App() {
 

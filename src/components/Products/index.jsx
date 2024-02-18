@@ -1,14 +1,18 @@
 import styles from "./index.module.css"
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import { useNavigate } from 'react-router-dom';
+import { Translation } from 'react-i18next';
 
 export default function index() {
 
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const Navigate = useNavigate();
 
-  const Navigate = useNavigate()
-
+  const productRef = useRef();
+  const categoryRef = useRef();
+  const companyRef = useRef();
+  const sortRef = useRef();
 
   useEffect(() => {
     setLoading(true)
@@ -26,35 +30,100 @@ export default function index() {
 
   }, [])
 
+  async function handleSearch(e) {
+    e.preventDefault();
+    try {
+      const response = await fetch(`https://strapi-store-server.onrender.com/api/products?search=${productRef.current.value}&category=${categoryRef.current.value}&company=${companyRef.current.value}&order=${sortRef.current.value}&price=${inputValue}000`);
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      const data = await response.json();
+      setInfo(data.data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  function handleReset() {
+    setLoading(true);
+    productRef.current.value = "";
+    categoryRef.current.value = "all";
+    companyRef.current.value = "all";
+    sortRef.current.value = "a-z";
+    fetch("https://strapi-store-server.onrender.com/api/products")
+      .then(res => res.json())
+      .then((el) => {
+        setData(el.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }
+
 
   return (
     <div className={styles.container}>
 
       {
         loading ? (
-          <p className={styles.loader}>Loading...</p>
+          <p className={styles.loader}></p>
         ) : (
           <>
             <div className={styles.products}>
               <div className={styles.selects}>
                 <div className={styles.product}>
-                  <label>Search Product</label><br />
-                  <input type="text" />
+                  <Translation>
+                    {
+                      t => <label>{t('product')}</label>
+                    }
+                  </Translation><br />
+                  <input ref={productRef} type="text" />
                 </div>
                 <div className={styles.category}>
-                  <label>Select Category</label><br />
-                  <select>
+                  <Translation>
+                    {
+                      t => <label>{t('category')}</label>
+                    }
+                  </Translation><br />
+                  <select ref={categoryRef}>
                     <option value="all" selected>all</option>
-                    <option value="tables">Tables</option>
-                    <option value="chairs">Chairs</option>
-                    <option value="kids">Kids</option>
-                    <option value="sofas">Sofas</option>
-                    <option value="beds">Beds</option>
+                    <Translation>
+                      {
+                        t => <option value="tables">{t('tables')}</option>
+                      }
+                    </Translation>
+                    <Translation>
+                      {
+                        t => <option value="chairs">{t('chairs')}</option>
+                      }
+                    </Translation>
+                    <Translation>
+                      {
+                        t => <option value="kids">{t('kids')}</option>
+                      }
+                    </Translation>
+                    <Translation>
+                      {
+                        t => <option value="sofas">{t('sofas')}</option>
+                      }
+                    </Translation>
+                    <Translation>
+                      {
+                        t => <option value="beds">{t('beds')}</option>
+                      }
+                    </Translation>
                   </select>
                 </div>
                 <div className={styles.compony}>
-                  <label>Select Company</label><br />
-                  <select>
+                  <Translation>
+                    {
+                      t => <label>{t('company')}</label>
+                    }
+                  </Translation><br />
+                  <select ref={companyRef}>
                     <option value="all">all</option>
                     <option value="modenza">Modenza</option>
                     <option value="luxora">Luxora</option>
@@ -64,18 +133,38 @@ export default function index() {
                   </select>
                 </div>
                 <div className={styles.sort}>
-                  <label>Sort By</label><br />
-                  <select>
+                  <Translation>
+                    {
+                      t => <label>{t('sort')}</label>
+                    }
+                  </Translation><br />
+                  <select ref={sortRef}>
                     <option value="a-z">a-z</option>
                     <option value="z-a">z-a</option>
-                    <option value="high">high</option>
-                    <option value="low">low</option>
+                    <Translation>
+                      {
+                        t => <option value="high">{t('high')}</option>
+                      }
+                    </Translation>
+                    <Translation>
+                      {
+                        t => <option value="low">{t('low')}</option>
+                      }
+                    </Translation>
                   </select>
                 </div>
               </div>
               <div className={styles.btn}>
-                <button className={styles.search}>SEARCH</button>
-                <button className={styles.reset}>RESET</button>
+                <Translation>
+                  {
+                    t => <button className={styles.search} onClick={handleSearch}>{t('search')}</button >
+                  }
+                </Translation>
+                <Translation>
+                  {
+                    t => <button className={styles.reset} onClick={handleReset}>{t('reset')}</button>
+                  }
+                </Translation>
               </div>
             </div>
 
