@@ -6,35 +6,12 @@
 }
 
 .container {
-    margin-top: 100px;
-}
-
-.container h1 {
-    font-size: 59px;
-    font-weight: 700;
-    line-height: 60px;
-    letter-spacing: -1.5px;
-    text-align: center;
-    margin-bottom: 50px;
-    color: rgba(57, 78, 106, 1);
-}
-
-.container h1 span {
-    background: rgba(5, 122, 255, 1);
-    padding: 15px;
-    color: rgba(219, 225, 255, 1);
-    font-size:36px;
-    border-radius:15px;
-    line-height:40px;
-    letter-spacing:3.6px;
-}
-
-.container p {
-    max-width: 670px;
+    max-width: 1300px;
     width: 100%;
-    margin: 0 auto;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 32px;
-    color: rgba(57, 78, 106, 1);
+    margin: 100px auto;
+    display: flex     
+};
+
+.indicator{
+    margin-left: 10px;
 }

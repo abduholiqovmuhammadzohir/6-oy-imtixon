@@ -28,21 +28,7 @@ export default function index() {
         setLoading(false)
       })
 
-  }, [])
-
-  async function handleSearch(e) {
-    e.preventDefault();
-    try {
-      const response = await fetch(`https://strapi-store-server.onrender.com/api/products?search=${productRef.current.value}&category=${categoryRef.current.value}&company=${companyRef.current.value}&order=${sortRef.current.value}&price=${inputValue}000`);
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      const data = await response.json();
-      setInfo(data.data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
+  }, []);
 
   function handleReset() {
     setLoading(true);
@@ -157,7 +143,7 @@ export default function index() {
               <div className={styles.btn}>
                 <Translation>
                   {
-                    t => <button className={styles.search} onClick={handleSearch}>{t('search')}</button >
+                    t => <button className={styles.search}>{t('search')}</button >
                   }
                 </Translation>
                 <Translation>

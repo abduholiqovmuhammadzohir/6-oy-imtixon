@@ -34,6 +34,10 @@
   align-items: center;
 }
 
+.indicator{
+  margin-left: 20px;
+}
+
 .navbar .logo {
   width: 60px;
   height: 55px;
